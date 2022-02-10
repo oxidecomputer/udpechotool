@@ -1,0 +1,13 @@
+# `udpecho` tool
+
+This is a very simple tool for testing UDP echo services. I wrote this when the
+existing tools in my package manager had a hard time with IPv6.
+
+Usage:
+
+```
+# pinging an IPv6 UDP echo service on port 7
+cargo run '[fe80::4:6ff:fe08:a0c]:7'
+# same but with an interface specifier for link-local addrs
+cargo run '[fe80::4:6ff:fe08:a0c%3]:7'
+```
